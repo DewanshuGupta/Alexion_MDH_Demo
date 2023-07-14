@@ -2,8 +2,8 @@ version: 2
 sources:
   - name: tpch
     description: source tpch data
-    database: snowflake_sample_data
-    schema: tpch_sf1
+    database: snowflake_sample_data_clone
+    schema: tpch_sf1_clone
     tables:
       - name: orders
         description: main order tracking table
