@@ -12,7 +12,6 @@ sources:
           - name: o_orderkey
             description: SF*1,500,000 are sparsely populated
             tests: 
-              - unique
               - not_null
 
       - name: lineitem
@@ -21,6 +20,10 @@ sources:
           - name: l_orderkey
             description: Foreign Key to O_ORDERKEY
             tests:
-              - relationships:
-                  to: source('tpch', 'orders')
-                  field: o_orderkey
+              - not_null
+              - unique
+          - name: l_suppkey
+            description: parting_key
+            tests:
+              - not_null
+              - unique

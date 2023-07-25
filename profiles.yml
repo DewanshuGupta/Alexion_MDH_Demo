@@ -1,0 +1,12 @@
+default:
+  outputs:
+    dev:
+      type: snowflake
+      user: DEWANSHU1301
+      password: Dewanshu@111
+      database: SNOWFLAKE_SAMPLE_DATA_CLONE
+      warehouse: COMPUTE_WH
+      schema: tpch_sf1
+      threads: 1
+      client_session_keep_alive: False
+  target: dev
